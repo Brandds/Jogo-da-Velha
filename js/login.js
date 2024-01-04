@@ -1,4 +1,5 @@
-URL = "https://tecmatch--brandds.repl.co/usuarios";
+URL =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios";
 let mensagerSucc = document.getElementById("mensagerSucc");
 mensagerSucc.style.display = "none";
 mensagerSucc.style.color = "green";

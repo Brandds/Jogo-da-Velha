@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   //Chamando JSONServer User
-  fetch(`https://tecmatch--brandds.repl.co/usuarios/${id}`)
+  fetch(
+    `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`
+  )
     .then(function (response) {
       return response.json();
     })
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Metodo PUT Perfil User
   function putUse(dados) {
-    URL = `https://tecmatch--brandds.repl.co/usuarios/${id}`;
+    URL = `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`;
     fetch(URL, {
       method: "PUT",
       headers: {
@@ -192,7 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let receberServ = [];
   //Chamando JSONServer Serviço
   function carregarJsonServ(dados) {
-    fetch("https://tecmatch--brandds.repl.co/servicos")
+    fetch(
+      "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos"
+    )
       .then(function (response) {
         return response.json();
       })
@@ -306,13 +310,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Funçao FETC POSTServ
   function postServicos(dados) {
-    fetch("https://tecmatch--brandds.repl.co/servicos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dados),
-    })
+    fetch(
+      "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
+      }
+    )
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
@@ -321,7 +328,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function Excluir(value) {
   document.querySelector(`.div-container[data-value="${value}"]`).remove();
-  fetch(`https://tecmatch--brandds.repl.co/servicos/${value}`, {
-    method: "DELETE",
-  }).then((response) => console.log("Item excluido"));
+  fetch(
+    `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos/${value}`,
+    {
+      method: "DELETE",
+    }
+  ).then((response) => console.log("Item excluido"));
 }

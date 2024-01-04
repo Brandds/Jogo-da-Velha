@@ -30,8 +30,10 @@ function filterAll() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const URLUsuario = "https://tecmatch--brandds.repl.co/usuarios";
-  const URLPost = "https://tecmatch--brandds.repl.co/posts";
+  const URLUsuario =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios";
+  const URLPost =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/posts";
   const postForm = document.getElementById("post-form");
 
   postForm.addEventListener("submit", (e) => {
@@ -78,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function Posts(id) {
   let divPost = document.getElementById("cards");
-  let Json = `https://tecmatch--brandds.repl.co/posts`;
+  let Json = `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/posts`;
   fetch(Json)
     .then(function (response) {
       return response.json();

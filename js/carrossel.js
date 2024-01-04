@@ -11,9 +11,12 @@ aPerfil.href = `Perfil.Freelancer.html?id=${id}`;
 
 let slideAtual = 0;
 let dadosUser = [];
-let URLuser = "https://tecmatch--brandds.repl.co/usuarios";
-let URLVagas = "https://tecmatch--brandds.repl.co/vagas";
-let URLServicos = "https://tecmatch--brandds.repl.co/servicos";
+let URLuser =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios";
+let URLVagas =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas";
+let URLServicos =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos";
 
 fetch(URLuser)
   .then((response) => response.json())

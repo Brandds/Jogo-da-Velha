@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 let pegardaros = [];
 function ReceberID(id) {
-  let Json = `https://tecmatch--brandds.repl.co/usuarios/${id}`;
+  let Json = `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`;
   fetch(Json)
     .then(function (response) {
       return response.json();
@@ -50,7 +50,8 @@ function getDadosUser(dados) {
 }
 console.log(pegardaros);
 function Servicos(id) {
-  let servicos = "https://tecmatch--brandds.repl.co/servicos";
+  let servicos =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos";
   fetch(servicos)
     .then(function (response) {
       return response.json();
@@ -110,33 +111,34 @@ function Servicos(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const URLComentario = "https://tecmatch--brandds.repl.co/comentarios";
+  const URLComentario =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/comentarios";
   const avaliacaoForm = document.getElementById("avaliacao-form");
 
-  const stars = document.querySelectorAll('.star');
+  const stars = document.querySelectorAll(".star");
   let selectedRating = 0;
 
-  stars.forEach(star => {
-    star.addEventListener('mouseover', () => {
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
       resetStars();
-      const value = parseInt(star.getAttribute('data-value'));
+      const value = parseInt(star.getAttribute("data-value"));
       highlightStars(value);
     });
 
-    star.addEventListener('click', () => {
-      selectedRating = parseInt(star.getAttribute('data-value'));
+    star.addEventListener("click", () => {
+      selectedRating = parseInt(star.getAttribute("data-value"));
     });
   });
 
   function highlightStars(value) {
     for (let i = 0; i < value; i++) {
-      stars[i].classList.add('oba');
+      stars[i].classList.add("oba");
     }
   }
 
   function resetStars() {
-    stars.forEach(star => {
-      star.classList.remove('oba');
+    stars.forEach((star) => {
+      star.classList.remove("oba");
     });
   }
 
@@ -156,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
           resetStars();
           selectedRating = 0;
         } else {
-          alert('Você deve escolher ao menos 1 estrela para avaliar');
+          alert("Você deve escolher ao menos 1 estrela para avaliar");
         }
 
         const avaliacao = {
@@ -164,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
           nome: document.getElementById("nome").value,
           usuario: id,
           comentario: document.getElementById("comentario").value,
-          estrela: estrela
+          estrela: estrela,
         };
 
         return fetch(URLComentario, {
@@ -183,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function Avaliacao(id) {
   let divComentario = document.getElementById("cards");
-  let Json = `https://tecmatch--brandds.repl.co/comentarios`;
+  let Json = `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/comentarios`;
   fetch(Json)
     .then(function (response) {
       return response.json();
@@ -220,7 +222,7 @@ function Avaliacao(id) {
     });
 }
 
-function gerarEstrelas(estrela){
+function gerarEstrelas(estrela) {
   const simbolo = `<i class="fa-solid fa-star text-warning"></i>`;
   const fullEstrela = simbolo.repeat(estrela);
   return fullEstrela;

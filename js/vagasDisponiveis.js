@@ -6,9 +6,11 @@ let aForum = document.getElementById("a-Forum");
 aForum.href = `Forum.html?id=${id}`;
 aPerfil.href = `Perfil.Freelancer.html?id=${id}`;
 namee.href = `carrossel.html?id=${id}`;
-URLVagas = "https://tecmatch--brandds.repl.co/vagas";
+URLVagas =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas";
 
-let URLuser = "https://tecmatch--brandds.repl.co/usuarios";
+let URLuser =
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios";
 let dadosUser = [];
 
 fetch(URLuser)

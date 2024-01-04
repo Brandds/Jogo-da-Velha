@@ -7,7 +7,9 @@ linKPerfil.href = `Perfil.Freelancer.html?id=${id}`;
 linkHome.href = `carrossel.html?id=${id}`;
 linkForum.href = `Forum.html?id=${id}`;
 let recerStatus = [];
-fetch(`https://tecmatch--brandds.repl.co/usuarios/${id}`)
+fetch(
+  `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`
+)
   .then((response) => response.json())
   .then((data) => {
     let input = document.getElementById("input-value");
@@ -22,7 +24,9 @@ fetch(`https://tecmatch--brandds.repl.co/usuarios/${id}`)
   });
 
 let receberdados = [];
-fetch("https://tecmatch--brandds.repl.co/avaliacoes")
+fetch(
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/avaliacoes"
+)
   .then((response) => response.json())
   .then((data) => {
     receberdados.push(data);
@@ -129,26 +133,32 @@ function receberRespota() {
 
 function putAvaliacao(dados) {
   console.log(dados);
-  fetch("https://tecmatch--brandds.repl.co/avaliacoes/0", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dados),
-  })
+  fetch(
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/avaliacoes/0",
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dados),
+    }
+  )
     .then((response) => response.json())
     .then((data) => console.log(data));
 }
 
 function putUserStatus(dados) {
   console.log(dados);
-  fetch(`https://tecmatch--brandds.repl.co/usuarios/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dados),
-  })
+  fetch(
+    `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dados),
+    }
+  )
     .then((response) => response.json())
     .then((data) => console.log(data));
 }

@@ -7,7 +7,9 @@ linkForum.href = `Forum.html?id=${id}`;
 linkPerfil.href = `Perfil.Freelancer.html?id=${id}`;
 linkCarrosel.href = `carrossel.html?id=${id}`;
 
-fetch("https://tecmatch--brandds.repl.co/usuarios")
+fetch(
+  "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios"
+)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

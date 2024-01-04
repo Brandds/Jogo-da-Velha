@@ -13,7 +13,9 @@ linkEditar.href = `TelaEditarPerfil.html?id=${id}`;
 //Recuperando ID do usuario
 let recebeAPI = [];
 
-fetch(`https://tecmatch--brandds.repl.co/usuarios/${id}`)
+fetch(
+  `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios/${id}`
+)
   .then(function (response) {
     return response.json();
   })
@@ -245,19 +247,24 @@ newVaga.addEventListener("click", async function (ev) {
 });
 
 function postVagas(dados) {
-  fetch("https://tecmatch--brandds.repl.co/vagas", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dados),
-  })
+  fetch(
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dados),
+    }
+  )
     .then((response) => response.json())
     .then((data) => {});
 }
 getVagas();
 function getVagas() {
-  fetch("https://tecmatch--brandds.repl.co/vagas")
+  fetch(
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas"
+  )
     .then((response) => response.json())
     .then(function (data) {
       let container = document.getElementById("vagas-criadas");
@@ -326,7 +333,10 @@ function getVagas() {
 }
 function Excluir(value) {
   document.querySelector(`.div-container[data-value="${value}"]`).remove();
-  fetch(`https://tecmatch--brandds.repl.co/vagas/${value}`, {
-    method: "DELETE",
-  }).then((response) => console.log("Item excluido"));
+  fetch(
+    `https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas/${value}`,
+    {
+      method: "DELETE",
+    }
+  ).then((response) => console.log("Item excluido"));
 }

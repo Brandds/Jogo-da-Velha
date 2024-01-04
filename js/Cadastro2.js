@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
           curriculo: "",
           imagem: "",
           servicos: "",
-          res: true
+          res: true,
         };
         console.log(usuario);
         let servicos = {
@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
           software: "",
           disponivel: "",
         };
-        URL = "https://tecmatch--brandds.repl.co/usuarios ";
+        URL =
+          "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios";
 
         fetch(URL)
           .then(function (response) {
@@ -197,7 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function postUser(dados) {
-  URL = "https://tecmatch--brandds.repl.co/usuarios ";
+  URL =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/usuarios ";
   fetch(URL, {
     method: "POST",
     headers: {
@@ -213,7 +215,8 @@ function postUser(dados) {
     });
 }
 function postVagas(dados) {
-  URL = "https://tecmatch--brandds.repl.co/vagas ";
+  URL =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/vagas ";
   fetch(URL, {
     method: "POST",
     headers: {
@@ -230,7 +233,8 @@ function postVagas(dados) {
 }
 
 function postServicos(dados) {
-  URL = "https://tecmatch--brandds.repl.co/servicos";
+  URL =
+    "https://824f0b64-78bc-4944-b935-0f7db8d53d61-00-2od22dn2afmgx.kirk.replit.dev/servicos";
   fetch(URL, {
     method: "POST",
     headers: {
