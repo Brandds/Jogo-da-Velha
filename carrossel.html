@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style_carrossel.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Página Inicial</title>
+  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="CSS/style_carrossel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <title>Página Inicial</title>
+</head>
+
+<body>
+  <!-- Navbar com menu mobile-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-3">
+    <div class="container">
+      <!--Logo-->
+      <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" width="100px" height="100px"
+          alt="logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Menu lateral-->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-5 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" id="a-Perfil" href="Perfil.Freelancer.html">Perfil</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#footer-midia">Contato</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" id="a-Vagas" href="/src/HTML/VagasDisponiveis.html">Vagas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" id="a-Avaliar" href="/src/HTML/VagasDisponiveis.html">Avaliar Site</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <a href="index.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #f94ca4">Sair</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carrossel -->
+    <div class="container-fluid">
+      <div class="row justify-content-center" id="tela"></div>
+    </div>
+
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()"><i class="fas fa-times" style="float: right;"></i></span>
+      <i class="fas fa-heart text-success fs-1 text-center mb-3"></i>
+      <h1 class="text-center">Você aceitou a vaga!</h1>
+      <p class="text-center">Ela já se encontra no seu perfil de usuário e a empresa já foi notificada.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal2">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModalRecusa()"><i class="fas fa-times" style="float: right;"></i></span>
+      <i class="fas fa-times text-danger fs-1 text-center mb-3"></i>
+      <h1 class="text-center">Você recusou a vaga!</h1>
+      <p class="text-center">Não foi dessa vez. Continue buscando para achar a vaga que dará match com você!</p>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="container mb-5 footer-container" id="footer-midia">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="text-white">Sobre a empresa</h3>
+        <p class="text-white mt-3">
+          TechMatch: A plataforma que une talento e oportunidade com a facilidade de um deslize. Encontre seu próximo projeto de forma rápida e eficiente. Sua jornada freelancer começa aqui!
+        </p>
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center gap-3">
+        <a href="#">
+          <img src="imgs/facebook.png" alt="facebook" width="40px" height="40px" />
+        </a>
+        <a href="#">
+          <img src="imgs/instagram.png" alt="instagram" width="40px" height="40px" />
+        </a>
+        <a href="#">
+          <img src="imgs/twitter.png" alt="twitter" width="40px" height="40px" />
+        </a>
+        <a href="#">
+          <img src="imgs/github.png" alt="github" width="40px" height="40px" />
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="whats">
+    <a href="https://wa.me/996566517/?text=Olá!Desejo saber mais informações." target="_blank">
+    <img src="imgs/whatsapp.png" alt="Fale conosco pelo Whatsapp" width="55"/>
+    </a>
+  </div>
+
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="js/carrossel.js" defer></script>
+</body>
+
+</html>
